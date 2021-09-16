@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">NickApp</string>
+    <string name="page2">Beautiful</string>
+    <string name="rick">rick</string>
+    <string name="love">love</string>
+    <string name="glory">glorious</string>
+    <string name="have_you_thanked_your_chosen_diety_or_potential_lack_therof_for_rick_astley_today">Have you thanked your chosen diety(or potential lack therof) for Rick Astley today?</string>
+    <string name="poll">Poll</string>
+    <string name="isn_t_he_handsome">On a scale of ten to ten, how handsome is he?</string>
+    <string name="press_the_button_if_you_appreciate_this_man">Press the button if you appreciate this man</string>
+    <string name="wonderful">wonderful</string>
+    <string-array name="thanked">
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+        <item>Ten</item>
+    </string-array>
+</resources>

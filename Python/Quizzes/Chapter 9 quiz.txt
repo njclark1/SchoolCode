@@ -1,0 +1,56 @@
+The set remove and discard methods behave differently only when a specified item is not found in the set
+	true
+the issubset() method can be used to determine whether set1 is a subset of set2
+	true
+In order to avoid KeyError exceptions, you can check whether a key is in the dictionary using the ______ operator.
+	in
+If you try to retrieve a value from a dictionary using a nonexistent key, a KeyError exception is raised
+	true
+The difference of set1 and set2 is a set that contains only the elements that appear in set1 but do not appear in set2
+	true
+What is the process using to convert an object to a stream of bytes that can be saved in a file?
+	pickling
+which method can be used to add a group of elements to a set?
+	update
+A dictionary can include the same value several times but cannot include the same key several times
+	true
+What will be the result of the following code - ages = {'Aaron' : 6, 'Kelly' : 3, ect - value = ages['Brianna']
+	keyerror
+The elements in a dictionary are stored in ascending order, by the keys of the key-value pairs
+	false
+Which would you use to get the number of elements in a dictionary?
+	len
+Sets are created using curly braces {}.
+	false
+What will be displayed after the following code executes? - cities = {'GA': 'Atlanta', ect - if 'FL' in cities: ect
+	The one with all of them
+Same question but with the cities = tall indented to be with the del cities
+	only the original items
+What is the correct structure to create a dictionary of months wherer each month will be accessed by its month number
+	{ 1 : 'january', 2 : 'Feb', ect }
+What is the value of the variable phones after the following code executes? - phones = { 'John' : '5555555', ect
+	{'john' : '5556666', ect
+Which would you use to delete an existing key-value pair from a dicitonary?
+	del
+What is the number of the first index in a dictionary?
+	not indexed
+The union of two sets is a set that contains only the elements that appear in both sets.
+	false
+Which method would you use to get the value associated with a specific key and remove that key-value pair from the dictionary?
+	pop
+Sets are immutable
+	false
+You would typically use a for loop to iterate over the elements in a set.
+	true
+Which of the following does not apply to sets?
+	in pairs
+Which method would you use to get all the elements in a dictionary returned as a list of tuples?
+	items
+In a dictionary, you use an_____ to locate a specific value.
+	key
+	
+
+
+	
+	
+	

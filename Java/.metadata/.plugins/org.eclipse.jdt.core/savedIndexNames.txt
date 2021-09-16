@@ -1,0 +1,13 @@
+INDEX VERSION 1.131+D:\WindowsCode\SchoolCode\Java\.metadata\.plugins\org.eclipse.jdt.core
+1835159913.index
+9067425.index
+2005756727.index
+1828026965.index
+1682373660.index
+3924426388.index
+1956084083.index
+305446040.index
+1797154492.index
+2575501851.index
+2658031773.index
+1289320443.index

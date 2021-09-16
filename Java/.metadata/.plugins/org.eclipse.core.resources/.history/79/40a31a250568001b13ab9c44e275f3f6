@@ -1,0 +1,16 @@
+package Chapter3and4;
+
+// programmer: nickj.clark14@gmail.com
+// date: 2021 02 02
+// modi date:
+// purpose: The purpose of this program is to calculate the compound interest of a loan
+
+public class Interest {
+
+	public static void main(String[] args) {
+		System.out.println("Purpose of this program");
+		
+
+	}
+
+}

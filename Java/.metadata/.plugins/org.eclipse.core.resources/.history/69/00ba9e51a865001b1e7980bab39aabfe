@@ -1,0 +1,21 @@
+package practice;
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) {
+		// Declare all variables.
+		String userName;
+		String userPassword;
+		String website;
+		Scanner scanner = new Scanner(System.in);
+		// Request the user's name.
+		System.out.print("What is your name? ");
+		userName = scanner.nextLine();
+		// Request the user's password.
+		System.out.print("Ok, and what is your password? ");
+		// Request the user's website.
+		System.out.print("What is your website? ");
+		userWebsite = scanner.nextLine();
+
+}
+}

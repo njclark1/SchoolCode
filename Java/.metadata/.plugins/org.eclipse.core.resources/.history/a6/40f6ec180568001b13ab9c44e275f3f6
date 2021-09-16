@@ -1,0 +1,10 @@
+package Chapter3and4;
+
+public class Interest {
+
+	public static void main(String[] args) {
+		System.out.println("Purpose of this program");
+
+	}
+
+}

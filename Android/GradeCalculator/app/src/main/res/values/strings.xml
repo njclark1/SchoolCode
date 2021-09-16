@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">GradeCalculator</string>
+    <string name="button1">1 grade type</string>
+    <string name="button2">2 grade types</string>
+    <string name="button3">3 grade types</string>
+    <string name="button4">4 grade types</string>
+    <string name="button5">5 grade types</string>
+    <string name="calcButton">Calculate</string>
+    <string name="resultText">ResultHere</string>
+    <string name="asWholeNumber">(Expressed as a whole number)</string>
+    <string name="blank"></string>
+    <string name="gradeTypeExplain">A grade type is a type of assignment that is weighted differently than others.(i.e. Homework, quizzes, tests, ect.)</string>
+    <string name="gradeTypeExplain2">Professor has a weird system where it all comes out of one big point total? divide each grade type\'s points by the overall number of points to find it\'s weighted percentage. If this comes out to a decimal, the more decimal places you include in the grade calculation, the more accurate your results will be.</string>
+    <string name="gradeTypeExplain3">Please refer to your professor\'s syllabus or online grading to find the weighting for your grades.</string>
+
+    <string name="askNumGradeTypes">How many grade types?</string>
+    <string name="numAssignments">Points Possible</string>
+    <string name="totalPointsForAssignments">Points Earned</string>
+    <string name="percentageOfGrade">percentage of grade</string>
+    <string name="type1">Grade type 1</string>
+    <string name="type2">Grade type 2</string>
+    <string name="type3">Grade type 3</string>
+    <string name="type4">Grade type 4</string>
+    <string name="type5">Grade type 5</string>
+    <string name="cute">cute</string>
+
+</resources>
