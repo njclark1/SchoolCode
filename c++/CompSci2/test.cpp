@@ -11,26 +11,34 @@
 //namespaces
 using namespace std;
 
-int calcNumWords(string);
+int calcNumWords(const char *);
 
 int main() {
 
+    //declare variables
     char sentence[] = "";
-    cout << "W" << endl;
-    cin.getline(sentence, 10000000000000);
+    int sentNumWords = 0;
 
+    //ask user for input
+    cout << "What is your string?" << endl;
+    cin.getline(sentence, 10000);
 
-    //cout << "What is your string?";
-    //cin >> sentence;
-   // int sentenceLength = sentence.length();
-    //char *pStr = new char[sentenceLength];
+    sentNumWords = calcNumWords(sentence);
 
-    //cout << *pStr << endl;
-  //  cout << sentenceLength << endl;
-    cout << sentence << endl;
-    cout << strlen(sentence) << endl;;
-
+    //output results to user
+    cout << "The number of words in your string is " << sentNumWords + 1 << endl;
    	//system pause and return to close main
     system("Pause");
 	return 0;
+}
+
+int calcNumWords(const char *sentence) {
+    int count = strlen(sentence);
+    int numWords = 0;
+    for (int i = 0; i < count; i++)
+    {
+        if (sentence[i] == ' ')
+        numWords ++;
+    }
+    return numWords;
 }
