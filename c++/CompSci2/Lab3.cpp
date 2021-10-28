@@ -11,8 +11,10 @@
 //namespaces
 using namespace std;
 
+//prototypes
 int calcNumWords(const char *);
 
+//main
 int main() {
 
     //declare variables
@@ -23,6 +25,7 @@ int main() {
     cout << "What is your string?" << endl;
     cin.getline(sentence, 10000);
 
+    //pass input to calculation function
     sentNumWords = calcNumWords(sentence);
 
     //output results to user
@@ -32,6 +35,7 @@ int main() {
 	return 0;
 }
 
+//function to calculate number of words in a string
 int calcNumWords(const char *sentence) {
     int count = strlen(sentence);
     int numWords = 1;
