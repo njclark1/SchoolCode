@@ -5,6 +5,6 @@ c= a + b
 def main():    
     x = "Hello Julien"
     y = "\nLet's have some fun with python!"
-    print (x, y, "\nThe result of this math is: ", c)
+    print (x, y, "Let's add ", a, "and", b, "\nThe result of this math is:", c)
 
 main()
