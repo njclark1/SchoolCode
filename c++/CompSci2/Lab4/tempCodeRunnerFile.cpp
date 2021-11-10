@@ -1,0 +1,2 @@
+
+    while (getline(myfile, line)) 
