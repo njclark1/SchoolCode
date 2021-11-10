@@ -14,12 +14,12 @@
 using namespace std;
 
 //prototypes
-
+string getInput();
+int getNumLines(string);
 
 //main
 int main() {
     //declare variables
-    string userFile;
     string line;
     int startingLine;
     int number_of_lines = 0;
@@ -27,14 +27,11 @@ int main() {
     string message = "The entire file has been output";
 
     //get user input
-    cout << "what is your file name?" << endl;
-    cin >> userFile;
+    string userFile = getInput();
 
-    fstream textFileCount(userFile);
-    //get number of lines in file
-    while (getline(textFileCount, line)) {
-        ++number_of_lines;
-    }
+    //get number of lines
+    int numberLines = getNumLines(userFile);
+
 
     //get line to start printing
     startingLine = number_of_lines - 10;
@@ -64,4 +61,26 @@ int main() {
    	//system pause and return to close main
     system("Pause");
 	return 0;
+}
+
+//get user input
+string getInput() {
+    string userInput;
+    cout << "what is your file name?" << endl;
+    cin >> userInput;
+    return userInput;
+}
+
+//get number of lines
+int getNumLines(string userFile) {
+    //open file for count
+    string line;
+    int numLines;
+    fstream textFileCount(userFile);
+    //get number of lines in file
+    while (getline(textFileCount, line)) {
+        numLines++;
+        
+    }
+    return numLines;
 }
