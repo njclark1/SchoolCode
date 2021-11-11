@@ -1,5 +1,5 @@
 //programmer: Nickj.clark14@gmail.com
-//date: 2021 11 10
+//date: 2021 11 11
 
 //include statements
 #include <iostream>
@@ -27,7 +27,8 @@ int main() {
     string message = "The entire file has been output";
 
     //get user input
-    cout << "what is your file name?" << endl;
+    cout << "This program will ready a text file and output the last ten lines." << endl;
+    cout << "what is your file name, including the file type extension?" << endl;
     cin >> userFile;
 
     fstream textFileCount(userFile);
