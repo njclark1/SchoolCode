@@ -15,7 +15,6 @@ using namespace std;
 
 //prototypes
 
-
 //main
 int main() {
     //declare variables
