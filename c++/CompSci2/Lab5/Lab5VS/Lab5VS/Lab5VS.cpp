@@ -24,6 +24,7 @@ int main() {
 
     //output results to user
     cout << "Hi" << endl;
+
     //system pause and return to close main
     system("Pause");
     return 0;
