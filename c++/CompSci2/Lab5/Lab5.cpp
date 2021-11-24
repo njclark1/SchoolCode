@@ -9,6 +9,7 @@
 #include <cstring>
 #include <fstream>
 
+
 //namespaces
 using namespace std;
 
@@ -19,12 +20,23 @@ using namespace std;
 int main() {
 
     //declare variables
-
+    string myString = "";
     //logic
-    
+    cout << "What is your string?: " << endl;
+    getline(cin, myString);
     //output results to user
-    cout << "Hi" << endl;
+
+
+    cout << myString;
    	//system pause and return to close main
     system("Pause");
 	return 0;
+}
+
+void reverseStr(string myString) {
+    if (myString.size() == 0)
+    {
+        return;
+    }
+    cout << myString[0];
 }
