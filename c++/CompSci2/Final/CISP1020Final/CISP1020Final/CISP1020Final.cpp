@@ -29,8 +29,8 @@ output the results to user
 using namespace std;
 
 //prototypes
-float convertLbsToKgs(float);
-float convertKgsToLbs(float);
+double convertLbsToKgs(double);
+double convertKgsToLbs(double);
 void userMenuFunction(int);
 
 int main()
@@ -38,7 +38,7 @@ int main()
 
     //declare variables
     int conversionPicker = 0;
-    float valueToConvert = 0.00;
+    double valueToConvert = 0.00;
 
     //output results to user
     cout << "Hello, this program converts lbs to kgs or vice versa" << endl;
@@ -53,32 +53,32 @@ void userMenuFunction(int conversionPicker) {
     cout << "Press 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
     cin >> conversionPicker;
     if (conversionPicker == 1) {
-        float lbsToConvert = 0.00;
+        double lbsToConvert = 0.00;
         cout << "How many lbs would you like to convert to kgs?: " << endl;
         cin >> lbsToConvert;
-        float numKgs = convertLbsToKgs(lbsToConvert);
+        double numKgs = convertLbsToKgs(lbsToConvert);
         cout << "The number of Kgs is " << numKgs << endl;
     }
     else if (conversionPicker == 2) {
-        float kgsToConvert = 0.00;
+        double kgsToConvert = 0.00;
         cout << "How many kgs would you like to convert to lbs?: " << endl;
         cin >> kgsToConvert;
-        float numLbs = convertKgsToLbs(kgsToConvert);
+        double numLbs = convertKgsToLbs(kgsToConvert);
         cout << "The number of Lbs is " << numLbs << endl;
     }
 }
 
-float convertLbsToKgs(float lbsToConvert) {
-    float numKgs = 0.00;
-    float lbsInKg = 2.205;
+double convertLbsToKgs(double lbsToConvert) {
+    double numKgs = 0.00;
+    double lbsInKg = 2.205;
     cout << "conversion to kgs called" << endl;
     numKgs = lbsToConvert / lbsInKg;
     return numKgs;
 }
 
-float convertKgsToLbs(float kgsToConvert) {
-    float numLbs = 0.00;
-    float lbsInKg = 2.205;
+double convertKgsToLbs(double kgsToConvert) {
+    double numLbs = 0.00;
+    double lbsInKg = 2.205;
     cout << "conversion to lbs called" << endl;
     numLbs = kgsToConvert * lbsInKg;
     return numLbs;
