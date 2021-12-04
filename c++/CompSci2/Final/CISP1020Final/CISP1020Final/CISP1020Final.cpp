@@ -22,8 +22,6 @@ output the results to user
 #include <iostream>
 #include <iomanip>
 #include <string>
-#include <algorithm>
-#include <cstring>
 
 //namespaces
 using namespace std;
@@ -33,15 +31,17 @@ double convertLbsToKgs(double);
 double convertKgsToLbs(double);
 void userMenuFunction(int);
 
+//main function
 int main()
 {
-
     //declare variables
     int conversionPicker = 0;
     double valueToConvert = 0.00;
 
-    //output results to user
+    //output introduction to user
     cout << "Hello, this program converts lbs to kgs or vice versa" << endl;
+
+    //call menu function
     userMenuFunction(conversionPicker);
 
     //system pause and return to close main
@@ -49,37 +49,50 @@ int main()
     return 0;
 }
 
+//menu function for user to choose conversion
 void userMenuFunction(int conversionPicker) {
     cout << "Press 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
     cin >> conversionPicker;
+    //logic to call conversion from lbs to kgs
     if (conversionPicker == 1) {
         double lbsToConvert = 0.00;
         cout << "How many lbs would you like to convert to kgs?: " << endl;
         cin >> lbsToConvert;
         double numKgs = convertLbsToKgs(lbsToConvert);
+
+        //output final result to user
         cout << "The number of Kgs is " << numKgs << endl;
     }
+    //logic to call conversion from kgs to lbs
     else if (conversionPicker == 2) {
         double kgsToConvert = 0.00;
         cout << "How many kgs would you like to convert to lbs?: " << endl;
         cin >> kgsToConvert;
         double numLbs = convertKgsToLbs(kgsToConvert);
+
+        //output final result to user
         cout << "The number of Lbs is " << numLbs << endl;
     }
 }
 
+//function to convert from lbs to kgs
 double convertLbsToKgs(double lbsToConvert) {
+    //variables
     double numKgs = 0.00;
-    double lbsInKg = 2.205;
-    cout << "conversion to kgs called" << endl;
-    numKgs = lbsToConvert / lbsInKg;
+    double kgsInLb = 0.45359237;
+    //conversion math
+    numKgs = lbsToConvert * kgsInLb;
+    //return answer
     return numKgs;
 }
 
+//function to convert from kgs to lbs
 double convertKgsToLbs(double kgsToConvert) {
+    //variables
     double numLbs = 0.00;
-    double lbsInKg = 2.205;
-    cout << "conversion to lbs called" << endl;
-    numLbs = kgsToConvert * lbsInKg;
+    double kgsInLb = 0.45359237;
+    //conversion
+    numLbs = kgsToConvert / kgsInLb;
+    //return answer
     return numLbs;
 }
