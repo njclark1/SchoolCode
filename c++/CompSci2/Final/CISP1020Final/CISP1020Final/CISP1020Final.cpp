@@ -29,20 +29,57 @@ output the results to user
 using namespace std;
 
 //prototypes
-//int calcNumWords(const char*);
-//int calcNumWords(const char*);
+float convertLbsToKgs(float);
+float convertKgsToLbs(float);
+void userMenuFunction(int);
 
 int main()
 {
 
     //declare variables
-    int myint = 0;
+    int conversionPicker = 0;
+    float valueToConvert = 0.00;
 
     //output results to user
-    std::cout << "Hello World!\n";
+    cout << "Hello, this program converts lbs to kgs or vice versa" << endl;
+    userMenuFunction(conversionPicker);
 
     //system pause and return to close main
     system("Pause");
     return 0;
 }
 
+void userMenuFunction(int conversionPicker) {
+    cout << "Press 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+    cin >> conversionPicker;
+    if (conversionPicker == 1) {
+        float lbsToConvert = 0.00;
+        cout << "How many lbs would you like to convert to kgs?: " << endl;
+        cin >> lbsToConvert;
+        float numKgs = convertLbsToKgs(lbsToConvert);
+        cout << "The number of Kgs is " << numKgs << endl;
+    }
+    else if (conversionPicker == 2) {
+        float kgsToConvert = 0.00;
+        cout << "How many kgs would you like to convert to lbs?: " << endl;
+        cin >> kgsToConvert;
+        float numLbs = convertKgsToLbs(kgsToConvert);
+        cout << "The number of Lbs is " << numLbs << endl;
+    }
+}
+
+float convertLbsToKgs(float lbsToConvert) {
+    float numKgs = 0.00;
+    float lbsInKg = 2.205;
+    cout << "conversion to kgs called" << endl;
+    numKgs = lbsToConvert / lbsInKg;
+    return numKgs;
+}
+
+float convertKgsToLbs(float kgsToConvert) {
+    float numLbs = 0.00;
+    float lbsInKg = 2.205;
+    cout << "conversion to lbs called" << endl;
+    numLbs = kgsToConvert * lbsInKg;
+    return numLbs;
+}
