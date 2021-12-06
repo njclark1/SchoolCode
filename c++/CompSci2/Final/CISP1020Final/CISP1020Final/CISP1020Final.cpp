@@ -39,7 +39,7 @@ int main()
     double valueToConvert = 0.00;
 
     //output introduction to user
-    cout << "Hello, this program converts lbs to kgs or vice versa" << endl;
+    cout << "Hello, this program can convert lbs to kgs and kgs to lbs" << endl;
 
     //call menu function
     userMenuFunction(conversionPicker);
@@ -51,7 +51,7 @@ int main()
 
 //menu function for user to choose conversion
 void userMenuFunction(int conversionPicker) {
-    cout << "Press 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+    cout << "\nPress 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
     cin >> conversionPicker;
     //logic to call conversion from lbs to kgs
     if (conversionPicker == 1) {
@@ -61,7 +61,7 @@ void userMenuFunction(int conversionPicker) {
         double numKgs = convertLbsToKgs(lbsToConvert);
 
         //output final result to user
-        cout << "The number of Kgs is " << numKgs << endl;
+        cout << lbsToConvert << "lbs converts to " << numKgs << "kgs" << endl;
     }
     //logic to call conversion from kgs to lbs
     else if (conversionPicker == 2) {
@@ -71,7 +71,8 @@ void userMenuFunction(int conversionPicker) {
         double numLbs = convertKgsToLbs(kgsToConvert);
 
         //output final result to user
-        cout << "The number of Lbs is " << numLbs << endl;
+        cout << kgsToConvert << "kgs converts to " << numLbs << "lbs" << endl;
+
     }
 }
 
