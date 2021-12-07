@@ -51,13 +51,21 @@ int main()
 
 //menu function for user to choose conversion
 void userMenuFunction(int conversionPicker) {
-    cout << "\nPress 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+    cout << "\nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
     cin >> conversionPicker;
+
+    //input validation on conversion type selection
+    if (conversionPicker != 1 || conversionPicker != 2) {
+        cout << "oops, your selection must be either 1 or 2. \nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+        cin >> conversionPicker;
+    }
+
     //logic to call conversion from lbs to kgs
     if (conversionPicker == 1) {
         double lbsToConvert = 0.00;
         cout << "How many lbs would you like to convert to kgs?: " << endl;
         cin >> lbsToConvert;
+
         double numKgs = convertLbsToKgs(lbsToConvert);
 
         //output final result to user
@@ -71,7 +79,7 @@ void userMenuFunction(int conversionPicker) {
         double numLbs = convertKgsToLbs(kgsToConvert);
 
         //output final result to user
-        cout << kgsToConvert << "kgs converts to " << numLbs << "lbs" << endl;
+        cout << kgsToConvert << "kgs converts to " << numLbs << "lbs " << endl;
 
     }
 }
