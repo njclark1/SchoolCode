@@ -36,10 +36,41 @@ int main()
 {
     //declare variables
     int conversionPicker = 0;
+    int lbsToKgsChoice = 1;
+    int kgsToLbsChoice = 2;
+
     double valueToConvert = 0.00;
 
     //output introduction to user
     cout << "Hello, this program can convert lbs to kgs and kgs to lbs" << endl;
+
+    //user input selection
+    cout << "\nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+    cin >> conversionPicker;
+
+    //input validation for conversion selection
+    if (conversionPicker == 1 || conversionPicker == 2) {
+        //call menu function
+        userMenuFunction(conversionPicker);
+    }
+    while (conversionPicker != lbsToKgsChoice && conversionPicker != kgsToLbsChoice) {
+
+        //handle string input
+        if (cin.fail())
+        {
+            // clear cin failure
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else if (conversionPicker > 2) {
+            cout << "\nYour selection must be either 1 or 2. \nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+            cin >> conversionPicker;
+        }
+        else if (conversionPicker < 1) {
+            cout << "\nYour selection must be either 1 or 2. \nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
+            cin >> conversionPicker;
+        }
+    }//end main
 
     //call menu function
     userMenuFunction(conversionPicker);
@@ -51,14 +82,6 @@ int main()
 
 //menu function for user to choose conversion
 void userMenuFunction(int conversionPicker) {
-    cout << "\nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
-    cin >> conversionPicker;
-
-    //input validation on conversion type selection
-    if (conversionPicker != 1 || conversionPicker != 2) {
-        cout << "oops, your selection must be either 1 or 2. \nEnter 1 to covert from Lbs to Kgs, or 2 to convert from Kgs to Lbs" << endl;
-        cin >> conversionPicker;
-    }
 
     //logic to call conversion from lbs to kgs
     if (conversionPicker == 1) {
@@ -66,6 +89,19 @@ void userMenuFunction(int conversionPicker) {
         cout << "How many lbs would you like to convert to kgs?: " << endl;
         cin >> lbsToConvert;
 
+        //handle string input
+        while (cin.fail())
+        {
+            // clear cin failure
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            //ask user for input again
+            cout << "How many lbs would you like to convert to kgs?: " << endl;
+            cin >> lbsToConvert;
+        }
+        
+        //call conversion
         double numKgs = convertLbsToKgs(lbsToConvert);
 
         //output final result to user
@@ -76,13 +112,26 @@ void userMenuFunction(int conversionPicker) {
         double kgsToConvert = 0.00;
         cout << "How many kgs would you like to convert to lbs?: " << endl;
         cin >> kgsToConvert;
+
+        //handle string input
+        while (cin.fail())
+        {
+            // clear cin failure
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+            //ask user for input again
+            cout << "How many kgs would you like to convert to lbs?: " << endl;
+            cin >> kgsToConvert;
+        }
+
+        //call conversion
         double numLbs = convertKgsToLbs(kgsToConvert);
 
         //output final result to user
         cout << kgsToConvert << "kgs converts to " << numLbs << "lbs " << endl;
-
     }
-}
+}//end userMenuFunction
 
 //function to convert from lbs to kgs
 double convertLbsToKgs(double lbsToConvert) {
@@ -93,7 +142,7 @@ double convertLbsToKgs(double lbsToConvert) {
     numKgs = lbsToConvert * kgsInLb;
     //return answer
     return numKgs;
-}
+}//end convertLbsToKgs function
 
 //function to convert from kgs to lbs
 double convertKgsToLbs(double kgsToConvert) {
@@ -104,4 +153,4 @@ double convertKgsToLbs(double kgsToConvert) {
     numLbs = kgsToConvert / kgsInLb;
     //return answer
     return numLbs;
-}
+}//end convertKgsToLbs function
