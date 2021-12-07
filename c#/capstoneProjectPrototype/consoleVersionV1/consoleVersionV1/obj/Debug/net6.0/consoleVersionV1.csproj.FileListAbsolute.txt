@@ -1,0 +1,15 @@
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\consoleVersionV1.exe
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\consoleVersionV1.deps.json
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\consoleVersionV1.runtimeconfig.json
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\consoleVersionV1.dll
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\ref\consoleVersionV1.dll
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\bin\Debug\net6.0\consoleVersionV1.pdb
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.csproj.AssemblyReference.cache
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.AssemblyInfoInputs.cache
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.AssemblyInfo.cs
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.csproj.CoreCompileInputs.cache
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.dll
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\ref\consoleVersionV1.dll
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.pdb
+C:\Users\Nick\source\repos\njclark1\SchoolCode\c#\capstoneProjectPrototype\consoleVersionV1\consoleVersionV1\obj\Debug\net6.0\consoleVersionV1.genruntimeconfig.cache
