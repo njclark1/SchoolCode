@@ -1,6 +1,24 @@
 ﻿//programmer: nickj.clark14@gmail.com
 //date: 12/7/2021
 
+//prompt
+/*Write a program that reads the contents of a text file with these answers, then reads the contents of 
+another file containing the student answers, and then compares the two answers (hint: character arrays 
+may be helpful here). The program should then determine the number of questions that the student 
+missed, and then display the following:
+
+DONE - A list of the questions missed by the student, showing the correct answer and the incorrect 
+answer provided by the student for each missed question.
+
+DONE - The total number of questions missed.
+
+DONE - The percentage of questions answered correctly. This can be calculated as Correctly Answered 
+Questions / Total Number of Questions.
+
+DONE - If the percentage of correctly answered questions is 70 percent or greater, the program should 
+indicate that the student passed the exam. Otherwise, it should indicate that the student failed 
+the exam.
+*/
 //imports
 using System;
 
@@ -24,27 +42,30 @@ class Program
         correctArray = new string[20];
 
         //introduce program to user
-        Console.WriteLine("Hello, this program will grade your exam");
+        Console.WriteLine("Hello! This program will grade your exam\n");
 
         //call function to read student answer file
         readStudentFile(studentArray);
-        testPrintArray(studentArray);
+       // testPrintArray(studentArray);
 
 
         //call function to read correct answer file
         readCorrectFile(correctArray);
-        testPrintArray(correctArray);
+       // testPrintArray(correctArray);
 
         //call function to calculate the number of incorrect answers
-        calcNumIncorrectAnswers(numAnswersIncorrect, studentArray, correctArray);
+        numAnswersIncorrect = calcNumIncorrectAnswers(studentArray, correctArray);
+        Console.WriteLine("\nThe number of answers this student has missed is: " + numAnswersIncorrect);
 
+        //call function to calculate total grade
+        calcResults(numAnswersIncorrect);
     }//end main function
 
     //function to parse student answer file
     static void readStudentFile(string[] studentArray)
     {
         //update user
-        Console.WriteLine("reading student file to array");
+        Console.WriteLine("#Attempting to read student file and write to array");
 
         //variables
         string studentPath = "studentAnswers.txt";
@@ -53,7 +74,7 @@ class Program
         if (File.Exists(studentPath))
         {
             //log if file found
-            Console.WriteLine("\nFound student file\n");
+            Console.WriteLine("#Found student file\n#Writing to array now\n");
             int counter = 0;
 
             // Read the file and display it line by line.  
@@ -68,7 +89,7 @@ class Program
     //function to parse correct answer file
     static void readCorrectFile(string[] correctArray) {
         //update user
-        Console.WriteLine("reading correct answer file to array");
+        Console.WriteLine("#Attempting to read correct answer file and write to array");
 
         //variables
         string correctPath = "correctAnswers.txt";
@@ -77,7 +98,7 @@ class Program
         if (File.Exists(correctPath))
         {
             //log if file found
-            Console.WriteLine("\nFound correct answer file\n");
+            Console.WriteLine("#Found correct answer file\n#Writing to array now\n");
             int counter = 0;
 
             // Read the file and display it line by line.  
@@ -89,23 +110,74 @@ class Program
         }
     }//end readcorrectfile
 
-    //function to print chosen array to console
-    static void testPrintArray(string[] printArray)
+    //function to calculate the number of incorrect answers
+    static int calcNumIncorrectAnswers(string[] studentArray, string[] correctArray)
     {
-        Console.WriteLine("\nprinting array chosen to test\n");
+        //update user
+        Console.WriteLine("#Calculating incorrect answers\n");
+
+        //variables
+        int numIncorrect = 0;
         int counter = 0;
-        foreach (string line in printArray)
+
+        //count number of lines that aren't the same
+        foreach (string line in studentArray)
         {
-            Console.WriteLine(line);
+            if (studentArray[counter] != correctArray[counter])
+            {
+                numIncorrect++;
+                Console.WriteLine("Student missed question# " + counter + ". \nThe incorrect answer given was: " + line + "\nThe correct answer was: " + correctArray[counter]);
+            }
             counter++;
         }
-    }//end testprint function
+        return numIncorrect;
+    }//end calcincorrect 
 
-    //function to calculate the number of incorrect answers
-    static void calcNumIncorrectAnswers(int numIncorrect, string[] studentArray, string[] correctArray)
+    static void calcResults(int numIncorrect)
     {
-        Console.WriteLine("calculating number of incorrect answers");
-    }//end calcincorrect function
+        //variables
+        int numQuestions = 20;
+        int numCorrect = numQuestions - numIncorrect;
+        double gradePercentage = (double)numCorrect / (double)numQuestions;
+        gradePercentage = gradePercentage * 100;
+        bool passed = true;
 
-    }//end program
+        if (gradePercentage >= 70)
+        {
+            passed = true;
+        }
+        else
+        {
+            passed = false;
+        }
+
+        //output results to user
+        Console.WriteLine("The student's percentage grade is: " + gradePercentage + "%");
+        if (passed == true)
+        {
+            Console.WriteLine("Hooray! This student has passed the test");
+            
+        }
+        else
+        {
+            Console.WriteLine("Unfortunately, this student has not passed the test");
+        }
+
+        //function to print chosen array to console
+        //unused at the moment, but possibly useful for debugging
+        /*
+            static void testPrintArray(string[] printArray)
+            {
+                Console.WriteLine("\n#Printing array chosen to test\n");
+                int counter = 0;
+                foreach (string line in printArray)
+                {
+                    Console.WriteLine(line);
+                    counter++;
+                }
+            }//end testprint function
+        */
+    }
+
+}//end program
 
