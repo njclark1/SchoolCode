@@ -119,7 +119,7 @@ class Program
             if (studentArray[counter] != correctArray[counter])
             {
                 numIncorrect++;
-                Console.WriteLine("Student missed question# " + counter + ". \nThe incorrect answer given was: " + line + "\nThe correct answer was: " + correctArray[counter]);
+                Console.WriteLine("Student missed question# " + (counter + 1) + ". \nThe incorrect answer given was: " + line + "\nThe correct answer was: " + correctArray[counter]);
             }
             counter++;
         }
