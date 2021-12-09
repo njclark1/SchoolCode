@@ -64,17 +64,13 @@ class Program
     //function to parse student answer file
     static void readStudentFile(string[] studentArray)
     {
-        //update user
-        Console.WriteLine("#Attempting to read student file and write to array");
-
         //variables
         string studentPath = "studentAnswers.txt";
 
         //read file
         if (File.Exists(studentPath))
         {
-            //log if file found
-            Console.WriteLine("#Found student file\n#Writing to array now\n");
+            //variables
             int counter = 0;
 
             // Read the file and display it line by line.  
@@ -88,8 +84,6 @@ class Program
 
     //function to parse correct answer file
     static void readCorrectFile(string[] correctArray) {
-        //update user
-        Console.WriteLine("#Attempting to read correct answer file and write to array");
 
         //variables
         string correctPath = "correctAnswers.txt";
@@ -97,8 +91,7 @@ class Program
         //read file
         if (File.Exists(correctPath))
         {
-            //log if file found
-            Console.WriteLine("#Found correct answer file\n#Writing to array now\n");
+            //variables
             int counter = 0;
 
             // Read the file and display it line by line.  
@@ -155,12 +148,12 @@ class Program
         Console.WriteLine("The student's percentage grade is: " + gradePercentage + "%");
         if (passed == true)
         {
-            Console.WriteLine("Hooray! This student has passed the test");
+            Console.WriteLine("\nHooray! This student has passed the test");
             
         }
         else
         {
-            Console.WriteLine("Unfortunately, this student has not passed the test");
+            Console.WriteLine("\nUnfortunately, this student has not passed the test");
         }
 
         //function to print chosen array to console
